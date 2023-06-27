@@ -60,11 +60,11 @@ const updateSlider = () => {
 updateSlider();
 
 const copyPassword = () => {
-    document.querySelector(".pass-lenght span").innerText = lengthSlider.value;
+    navigator.clipboard.writeText(passwordInput.value);
     copyIcon.innerText = "check";
     copyIcon.style.color = "#4285F4";
     setTimeout(() => {
-        copyIcon.innerText = "copy_all";
+        copyIcon.innerText = "copy";
         copyIcon.style.color = "#707070";
     }, 1500);
 };
